@@ -12,11 +12,17 @@ imap     <expr> <Tab> pumvisible() ? "\<Down>" : "\<Tab>"
 inoremap [<CR> [<CR>]<Esc>O<BS><Tab>
 inoremap {<CR> {<CR>}<Esc>O<BS><Tab>
 inoremap jk <esc>
+inoremap jj <esc>
 inoremap kj <esc>
-inoremap ол <esc>
-inoremap ло <esc>
+inoremap чя <esc>
 
-" nmap <Leader>w <Plug>(easymotion-overwin-f)
+" tryna stop using arrows in insert mode
+imap <expr> <Down>  pumvisible() ? "\<Down>"  : ""
+imap <expr> <Up>    pumvisible() ? "\<Up>"    : ""
+imap <expr> <Left>  pumvisible() ? "\<Left>"  : "\<Left>"
+imap <expr> <Right> pumvisible() ? "\<Right>" : "\<Right>"
+
+nmap <leader><leader>w <Plug>(easymotion-bd-w)
 
 inoremap <esc> <nop>
 inoremap <C-c> <nop>
@@ -34,16 +40,18 @@ nmap     <silent> <leader>gr <Plug>(coc-references)
 nmap     <silent> gi <Plug>(coc-implementation)
 nmap     <silent> gy <Plug>(coc-type-definition)
 nmap     ж :
+nmap     zz :Fm<cr>
+nmap     <M-h> :noh<cr>
 " nmap     ` :call ChangeLineNumbering()<cr>
 nmap     ga <Plug>(EasyAlign)
 nmap     gr <cmd>lua require'telescope.builtin'.lsp_references{}<CR>
 nnoremap <C-e> :FloatermToggle<CR>
 nnoremap <leader>f <cmd>lua require'telescope.builtin'.find_files{}<CR>
 nnoremap <C-t> :Clap todo<CR>
-nnoremap <leader>0 <cmd>lua require'telescope.builtin'.live_grep{}<CR>
+nnoremap <leader>c <cmd>lua require'telescope.builtin'.live_grep{}<CR>
 nnoremap <leader>` :Clap vimconf<CR>
 nnoremap <leader>b :Clap buffers<CR>
-" nnoremap <leader>f :Clap files<CR>
+nnoremap <leader>f :CtrlP<CR>
 nnoremap <leader>j :Clap jumps<CR>
 nnoremap <leader>n :bn<cr>
 nnoremap <leader>p :bp<cr>
@@ -52,15 +60,20 @@ nnoremap <leader>wq :vert bo vnew<CR>:VimwikiIndex<CR>
 nnoremap <leader>x zc
 nnoremap <leader>y :ToggleWorkspace<CR>
 nnoremap <leader>z zo
-nnoremap <silent> <Leader>+ :vertical resize +5<CR>
-nnoremap <silent> <Leader>- :vertical resize -5<CR>
+nnoremap <silent> <leader>+ :vertical resize +5<CR>
+nnoremap <silent> <leader>- :vertical resize -5<CR>
 nnoremap <silent> <leader>lg :LazyGit<CR>
 nnoremap <silent> K :call Show_documentation()<CR>
-nnoremap gb :Clap buffers<CR>
-" noremap  <silent> <Leader>w :call ToggleWrap()<CR>
+" nnoremap gb :Clap buffers<CR>
+nnoremap gb :CtrlPBuffer<CR>
+noremap  <silent> <leader>w :call ToggleWrap()<CR>
 vmap     <C-\> <plug>NERDCommenterToggle gv
 vmap     <C-_> <plug>NERDCommenterToggle gv
 vmap     <C-c> :w !clip.exe<CR><CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 xmap     ga <Plug>(EasyAlign)
+
+iunmap о
+iunmap л
+

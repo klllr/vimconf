@@ -15,4 +15,4 @@ augroup vimrc-auto-mkdir
 augroup END
 autocmd FileType clap_input call Clap_mappings()
 
-autocmd VimEnter,BufEnter,CursorHold,CursorHoldI * call GetCodeStats()
+autocmd VimEnter,BufEnter,CursorHold,CursorHoldI,BufWrite * call GetCodeStats()

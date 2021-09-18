@@ -15,12 +15,13 @@ call plug#begin('~/.vim/plugged')
     " Plug 'b3nj5m1n/kommentary'
     Plug 'chrisbra/DynamicSigns'
     Plug 'easymotion/vim-easymotion'
+    Plug 'evanleck/vim-svelte', {'branch': 'main'}
     Plug 'Elethom/midnight.vim'
     " Plug 'francoiscabrol/ranger.vim'
     " Plug 'honza/vim-snippets'
     Plug 'https://gitlab.com/code-stats/code-stats-vim.git'
     Plug 'jdsimcoe/hyper.vim'
-    Plug 'jremmen/vim-ripgrep'
+    " Plug 'jremmen/vim-ripgrep'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'junegunn/goyo.vim'
@@ -29,6 +30,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'kdheepak/lazygit.nvim'
     Plug 'kien/ctrlp.vim'
     Plug 'kristijanhusak/vim-dadbod-ui'
+    Plug 'lervag/vimtex'
     Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
     Plug 'liuchengxu/vista.vim'
     Plug 'mbbill/undotree'
@@ -36,7 +38,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'mhinz/vim-startify'
     " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
     " Plug 'mklllr/vim-vividchalk'
-    Plug 'mklllr/based.vim'
+    Plug 'klllr/based.vim'
+    Plug 'klllr/mcube-ticker.nvim' ", { 'do': mcube_ticker_install() }
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'neoclide/jsonc.vim'
     Plug 'neovim/nvim-lspconfig'
@@ -53,9 +56,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'pseewald/vim-anyfold'
     Plug 'ryanoasis/vim-devicons'
     " Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'sayanarijit/xplr.vim'
     Plug 'SirVer/ultisnips'
     Plug 'thaerkh/vim-workspace'
     Plug 'tjdevries/nlua.nvim'
+    " Plug 'tkhren/vim-fake'
     Plug 'tpope/vim-abolish'
     " Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-dadbod'
@@ -71,5 +76,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'vimwiki/vimwiki'
     Plug 'voldikss/vim-floaterm'
     " Plug 'wsdjeg/vim-todo'
+    Plug 'xuhdev/vim-latex-live-preview'
     " Plug 'ycm-core/YouCompleteMe'
 call plug#end()

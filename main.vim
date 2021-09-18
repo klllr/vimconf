@@ -13,13 +13,13 @@ function! s:lsrc (fn)
 endfunction
 
 call s:src("set.vim")
+call s:src("pluginsettings.vim")
 call s:src("plugs.vim")
 call s:src("color.vim")
 call s:src("wikis.vim") " will be gitgnored
 call s:lsrc("lua/init.lua")
 
 call s:src("statusline.vim")
-call s:src("pluginsettings.vim")
 call s:src("commands.vim")
 call s:src("functions.vim")
 call s:src("bindings.vim")

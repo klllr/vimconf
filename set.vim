@@ -22,9 +22,9 @@ set shortmess+=c
 set signcolumn=yes
 set smartcase
 set smartindent
-set so=5
+set so=10
 set tabstop=4 softtabstop=4
-set timeoutlen=1000
+set timeoutlen=500
 set ttimeoutlen=50
 " set noesckeys
 set undodir=~/.vim/undodir_new
