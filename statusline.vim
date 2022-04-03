@@ -27,7 +27,7 @@ function! Statusline()
     let l:line='%#SLC1# %{toupper(g:currentmode[mode()])}%( %H %R%) '
     let l:line.='%#SLC1# %n%m %*'
     " let l:line.='%#Comment#%{mode()} '
-    let l:line.='%#SLC0# ▼ %1.3c %*'
+    let l:line.='%#SLC0# ▼ %l:%1.3c %*'
     let l:line.='%#SLC0# %1.3p٪ %*'
     let l:line.='%#SLCoc#%1.38{len(coc#status()) > 0 ? " ". coc#status() . " " : ""}%*'
     " let l:line.='%#SLCodestats#%( %{code_stats_day_xp} %)%*'
@@ -46,5 +46,3 @@ function! Statusline()
 endfunction
 
 set statusline=%!Statusline()
-
-

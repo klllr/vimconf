@@ -10,8 +10,8 @@ set guifont=CaskaydiaCove\ NF:h11
 set hidden
 set incsearch
 set list
-set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:↲,precedes:«,extends:»
-set listchars=tab:→\ ,trail:•,eol:↲
+set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,precedes:«,extends:»
+" set listchars=tab:→\ ,trail:•,eol:↲
 set nobackup
 set noswapfile
 set nowrap
@@ -36,5 +36,6 @@ set wildmenu
 set path+=**
 set wildignore+=**/node_modules/**
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
-
+set clipboard+=unnamedplus
 " set completeopt=menuone,noinsert,noselect
+set completeopt=menu,menuone,noinsert

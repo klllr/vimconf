@@ -14,7 +14,7 @@ let g:ctrlp_show_hidden = 1
 let bclose_multiple = 0
 "let g:NERDTreeHijackNetrw = 1
 let g:coc_global_extensions = [
-    \ 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-vetur', 'coc-tsserver', 'coc-go', 'coc-emmet', 'coc-clangd', 'coc-vimlsp'
+    \ 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-vetur', 'coc-tsserver', 'coc-go', 'coc-emmet', 'coc-vimlsp', 'coc-clangd', 'coc-rust-analyzer'
 \ ]
 let g:tagbar_type_rust = {
     \ 'ctagstype' : 'rust',
@@ -49,6 +49,8 @@ command! -bar -bang -nargs=? -complete=buffer Buffers
     \ call fzf#vim#buffers(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']}, <bang>0)
 
 let g:UltiSnipsExpandTrigger='<C-]>'
+let g:UltiSnipsJumpForwardTrigger="<C-'>"
+let g:UltiSnipsJumpBackwardTrigger="<C-;>"
 
 
 let s:f_list = globpath(expand("<sfile>:p:h"), '**/\(*.vim\|*.lua\)', 0, 1)
@@ -83,3 +85,6 @@ let g:livepreview_previewer = 'zathura'
 
 
 let g:svelte_preprocessors = ['typescript', 'scss']
+
+
+let g:sql_type_default = 'pgsql'

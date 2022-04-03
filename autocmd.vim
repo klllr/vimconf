@@ -1,7 +1,12 @@
 autocmd Filetype * AnyFoldActivate
 autocmd Filetype rust setlocal omnifunc=v:lua.vim.lsp.omnifunc
 autocmd BufWritePre * :call TrimWhitespace()
+
 autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
+autocmd BufRead,BufNewFile *.clar set filetype=clarity
+autocmd BufRead,BufNewFile *.clar set syntax=lisp
+
+
 augroup vimrc-auto-mkdir
   autocmd!
   autocmd BufWritePre * call s:auto_mkdir(expand('<afile>:p:h'), v:cmdbang)

@@ -34,16 +34,22 @@ nmap     <C-_> <plug>NERDCommenterToggle
 nmap     <C-q> :bw<CR>
 nmap     <C-s> :w<CR>
 nmap     <M-t> :FloatermNew<CR>
+
+
 nmap     <leader>rn <Plug>(coc-rename)
 nmap     <silent> <leader>gd <Plug>(coc-definition)
 nmap     <silent> <leader>gr <Plug>(coc-references)
+nmap     <silent> <leader>gr <Plug>(coc-references)
+
 nmap     <silent> gi <Plug>(coc-implementation)
 nmap     <silent> gy <Plug>(coc-type-definition)
+nmap     <silent> ga <Plug>(coc-codeaction-cursor)
+
 nmap     ж :
 nmap     zz :Fm<cr>
 nmap     <M-h> :noh<cr>
 " nmap     ` :call ChangeLineNumbering()<cr>
-nmap     ga <Plug>(EasyAlign)
+" nmap     ga <Plug>(EasyAlign)
 nmap     gr <cmd>lua require'telescope.builtin'.lsp_references{}<CR>
 nnoremap <C-e> :FloatermToggle<CR>
 nnoremap <leader>f <cmd>lua require'telescope.builtin'.find_files{}<CR>
@@ -69,7 +75,7 @@ nnoremap gb :CtrlPBuffer<CR>
 noremap  <silent> <leader>w :call ToggleWrap()<CR>
 vmap     <C-\> <plug>NERDCommenterToggle gv
 vmap     <C-_> <plug>NERDCommenterToggle gv
-vmap     <C-c> :w !clip.exe<CR><CR>
+vmap     <C-c> :w !xclip -sel clip<CR><CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 xmap     ga <Plug>(EasyAlign)
@@ -77,3 +83,22 @@ xmap     ga <Plug>(EasyAlign)
 iunmap о
 iunmap л
 
+
+unmap <Insert>
+
+" " Copy to clipboard
+vnoremap  <leader>y  "*y
+nnoremap  <leader>Y  "*yg_
+nnoremap  <leader>y  "*y
+nnoremap  <leader>yy  "*yy
+
+" " Paste from clipboard
+nnoremap <leader>p "*p
+nnoremap <leader>P "*P
+vnoremap <leader>p "*p
+vnoremap <leader>P "*P
+
+
+
+inoremap <silent><expr> <c-space> coc#refresh()
+nmap <leader>] /[A-Z]<CR>:noh<CR>

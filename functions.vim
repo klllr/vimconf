@@ -66,3 +66,10 @@ function! GetCodeStats()
     let g:code_stats_day_xp = trim(system('cat $HOME/stuff/codestats'))
 endfunction
 
+
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
