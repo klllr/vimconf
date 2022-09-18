@@ -35,6 +35,9 @@ lsp_installer.on_server_ready(function (server)
     server:setup(opts) -- this :setup() function is exactly[1] the same as lspconfig's setup() function
 end)
 
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+
 
 zero.preset('recommended')
 zero.setup()

@@ -10,8 +10,8 @@ return require('packer').startup(function(use)
     use 'nvim-lua/plenary.nvim'
     use 'nvim-lua/popup.nvim'
 
-    use 'nvim-telescope/telescope.nvim'
-    use 'nvim-telescope/telescope-fzy-native.nvim'
+    -- use 'nvim-telescope/telescope.nvim'
+    -- use 'nvim-telescope/telescope-fzy-native.nvim'
     use 'nvim-treesitter/nvim-treesitter'
 
     -- autocomptele
@@ -32,6 +32,11 @@ return require('packer').startup(function(use)
 
     }
 
+    use {
+        'glacambre/firenvim',
+        run = function() vim.fn['firenvim#install'](0) end
+    }
+
 
     -- tpope
     use 'tpope/vim-abolish'
@@ -41,6 +46,7 @@ return require('packer').startup(function(use)
     use 'tpope/vim-repeat'
     use 'tpope/vim-surround'
 
+    use 'dag/vim-fish'
 
   -- Load on an autocommand event
     use {'andymass/vim-matchup', event = 'VimEnter'}
@@ -73,7 +79,13 @@ return require('packer').startup(function(use)
     use 'mhinz/vim-startify'
     use 'neoclide/jsonc.vim'
     use { 'npxbr/glow.nvim', run = ':GlowInstall'}
-
+    -- use { 'anuvyklack/pretty-fold.nvim',
+       -- requires = 'anuvyklack/nvim-keymap-amend', -- only for preview
+       -- config = function()
+          -- require('pretty-fold').setup()
+          -- require('pretty-fold.preview').setup()
+       -- end
+    -- }
 
     use 'klllr/based.vim'
 end)

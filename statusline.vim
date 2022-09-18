@@ -41,7 +41,7 @@ function! Statusline()
     " let l:line.='%='
     let l:line.='%#SLC0# %y %*'
     let l:line.='%*'
-    let l:line.='%#SLC1#%( %{fugitive#head()} %)%*'
+    let l:line.='%#SLC1#%( %{FugitiveHead()} %)%*'
     return l:line
 endfunction
 

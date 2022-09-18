@@ -1,5 +1,7 @@
 autocmd Filetype * AnyFoldActivate
+" autocmd BufReadPost,FileReadPost * normal zR
 autocmd Filetype rust setlocal omnifunc=v:lua.vim.lsp.omnifunc
+
 autocmd BufWritePre * :call TrimWhitespace()
 
 autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
